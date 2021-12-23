@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Willkommen {{ user }}</title>
-</head>
-<body>
+	<head>
+		<title>Willkommen</title>
+		<pagetitle>Willkommen</pagetitle>
+	</head>
+	<body>
+		<h1>Willkommen {{ user }}
 
-<h1>Das hier ist die Seite</h1>
-<p>Es gibt noch nichts zu sehen, aber es funktioniert</p>
+		<p>Das hier ist die Seite</p>
+		<p>Es gibt noch nichts zu sehen, aber es funktioniert</p>
+		<br>
 
-</body>
+		<p>zum Backend: <a href={% url 'backend' %}>Django Admin</a></p>
+
+	</body>
 </html>
