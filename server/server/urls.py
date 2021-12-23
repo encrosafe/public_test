@@ -23,7 +23,7 @@ from core import views as core
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', core.start_view, name='start_view'),
+    path('start/', core.start_view, name='start_view'),
     path('', include('django.contrib.auth.urls'))
 ]
 
