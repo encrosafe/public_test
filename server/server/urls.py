@@ -18,8 +18,12 @@ from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
 
+from server.core import views as core
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', core.start_view, name='start_view'),
 ]
 
 if settings.DEBUG:
