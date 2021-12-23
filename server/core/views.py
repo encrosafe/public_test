@@ -15,7 +15,7 @@ def start_view(request):
 
 def check_login_and_redirect(request):
 	try:
-		if request.user:
+		if request.user and request.user.username != 'AnonymusUser':
 			return redirect('start_view')
 		else:
 			return redirect('login')
