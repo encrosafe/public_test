@@ -26,7 +26,7 @@ urlpatterns = [
     path('start/', core.start_view, name='start_view'),
     path('', core.check_login_and_redirect),
     path('', include('django.contrib.auth.urls')),
-    path('/login/success/', core.hook_after_login)
+    path('login/success/', core.hook_after_login)
 ]
 
 if settings.DEBUG:
