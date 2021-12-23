@@ -5,7 +5,9 @@ from django.template import loader
 # Create your views here.
 
 def start_view(request):
-	context['user'] = request.user
+	context = {
+		'user': request.user
+	}
 	template = loader.get_template('start_view.html')
 
 	return HttpResponse(template.render(context, request))
