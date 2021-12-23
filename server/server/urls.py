@@ -24,7 +24,7 @@ from core import views as core
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('start/', core.start_view, name='start_view'),
-    path('', core.check_login_and_redirect)
+    path('', core.check_login_and_redirect),
     path('', include('django.contrib.auth.urls'))
 ]
 
