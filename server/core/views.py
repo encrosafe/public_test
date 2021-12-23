@@ -21,3 +21,7 @@ def check_login_and_redirect(request):
 			return redirect('login')
 	except:
 		return redirect('login')
+
+
+def hook_after_login(request):
+	return redirect('start_view')
