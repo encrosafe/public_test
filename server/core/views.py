@@ -21,3 +21,10 @@ def check_login_and_redirect(request):
 			return redirect('login')
 	except:
 		return redirect('login')
+
+
+def hassler(request):
+	return render(request, 'index_hassler.hmtl')
+
+def index(request):
+	return render(request, 'index_')

@@ -25,7 +25,9 @@ urlpatterns = [
     path('admin/', admin.site.urls, name='backend'),
     path('start/', core.start_view, name='start_view'),
     path('', core.check_login_and_redirect),
-    path('', include('django.contrib.auth.urls'))
+    path('', include('django.contrib.auth.urls')),
+    path('hassler/', core.hassler, name='hassler'),
+    path('index/' core.index, name='index')
 ]
 
 if settings.DEBUG:

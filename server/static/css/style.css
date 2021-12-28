@@ -1,3 +1,4 @@
+{% load static %}
 html,
 body,
 div,
@@ -126,36 +127,36 @@ a {
 }
 @font-face {
   font-family: 'Walsheim';
-  src: url("../fonts/gt-walsheim-light-web.html");
-  src: url("../fonts/gt-walsheim-light-webd41d.html?#iefix") format('embedded-opentype'), url("../fonts/gt-walsheim-light-web-2.html") format('svg'), url("../fonts/gt-walsheim-light-web-3.html") format('woff'), url("../fonts/gt-walsheim-light-web-4.html") format('truetype');
+  src: url("../static/fonts/gt-walsheim-light-web.html");
+  src: url("../static/fonts/gt-walsheim-light-webd41d.html?#iefix") format('embedded-opentype'), url("../static/fonts/gt-walsheim-light-web-2.html") format('svg'), url("../static/fonts/gt-walsheim-light-web-3.html") format('woff'), url("../static/fonts/gt-walsheim-light-web-4.html") format('truetype');
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: 'Walsheim';
-  src: url("../fonts/gt-walsheim-regular-web.html");
-  src: url("../fonts/gt-walsheim-regular-webd41d.html?#iefix") format('embedded-opentype'), url("../fonts/gt-walsheim-regular-web-2.html") format('svg'), url("../fonts/gt-walsheim-regular-web-3.html") format('woff'), url("../fonts/gt-walsheim-regular-web-4.html") format('truetype');
+  src: url("../static/fonts/gt-walsheim-regular-web.html");
+  src: url("../static/fonts/gt-walsheim-regular-webd41d.html?#iefix") format('embedded-opentype'), url("../static/fonts/gt-walsheim-regular-web-2.html") format('svg'), url("../static/fonts/gt-walsheim-regular-web-3.html") format('woff'), url("../static/fonts/gt-walsheim-regular-web-4.html") format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'Walsheim';
-  src: url("../fonts/gt-walsheim-medium-web.html");
-  src: url("../fonts/gt-walsheim-medium-webd41d.html?#iefix") format('embedded-opentype'), url("../fonts/gt-walsheim-medium-web-2.html") format('svg'), url("../fonts/gt-walsheim-medium-web-3.html") format('woff'), url("../fonts/gt-walsheim-medium-web-4.html") format('truetype');
+  src: url("../static/fonts/gt-walsheim-medium-web.html");
+  src: url("../static/fonts/gt-walsheim-medium-webd41d.html?#iefix") format('embedded-opentype'), url("../static/fonts/gt-walsheim-medium-web-2.html") format('svg'), url("../static/fonts/gt-walsheim-medium-web-3.html") format('woff'), url("../static/fonts/gt-walsheim-medium-web-4.html") format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: 'NoeDisplay';
-  src: url("../fonts/noedisplay-bold.eot");
-  src: url("../fonts/noedisplay-boldd41d.eot?#iefix") format('embedded-opentype'), url("../fonts/noedisplay-bold.svg") format('svg'), url("../fonts/noedisplay-bold.woff") format('woff'), url("../fonts/noedisplay-bold.ttf") format('truetype');
+  src: url("../static/fonts/noedisplay-bold.eot");
+  src: url("../static/fonts/noedisplay-boldd41d.eot?#iefix") format('embedded-opentype'), url("../static/fonts/noedisplay-bold.svg") format('svg'), url("../static/fonts/noedisplay-bold.woff") format('woff'), url("../static/fonts/noedisplay-bold.ttf") format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: 'NoeDisplay';
-  src: url("../fonts/noedisplay-medium.html");
-  src: url("../fonts/noedisplay-mediumd41d.html?#iefix") format('embedded-opentype'), url("../fonts/noedisplay-medium-2.html") format('svg'), url("../fonts/noedisplay-medium-3.html") format('woff'), url("../fonts/noedisplay-medium-4.html") format('truetype');
+  src: url("../static/fonts/noedisplay-medium.html");
+  src: url("../static/fonts/noedisplay-mediumd41d.html?#iefix") format('embedded-opentype'), url("../static/fonts/noedisplay-medium-2.html") format('svg'), url("../static/fonts/noedisplay-medium-3.html") format('woff'), url("../static/fonts/noedisplay-medium-4.html") format('truetype');
   font-weight: 500;
   font-style: normal;
 }
@@ -271,7 +272,7 @@ a {
   left: 50%;
   height: 14px;
   width: 16px;
-  background: url("../img/arrow-next.svg") no-repeat;
+  background: url("../static/img/arrow-next.svg") no-repeat;
   z-index: 2;
   margin: -7px 0 0 -8px;
 }
@@ -346,7 +347,7 @@ a {
   width: 26px;
   height: 14px;
   margin-left: 5px;
-  background: url("../img/arrow-right.svg") no-repeat;
+  background: url("../static/img/arrow-right.svg") no-repeat;
   position: relative;
   top: 3px;
 }
@@ -441,10 +442,10 @@ a {
 }
 .main-header .main-logo #smilesvg {
   margin-top: -6px;
-  background: url("../img/logo-smile.svg") no-repeat bottom center;
+  background: url("../static/img/logo-smile.svg") no-repeat bottom center;
 }
 .main-header .main-logo #eyessvg {
-  background: url("../img/logo-eyes.svg") no-repeat top center;
+  background: url("../static/img/logo-eyes.svg") no-repeat top center;
   transition: opacity 0.4s;
 }
 .main-header .main-logo.loading #eyessvg {
@@ -1258,7 +1259,7 @@ a {
     display: none;
   }
   #part-home header .background-wrapper {
-    background: url("../medias/home/juergen-hasssler.jpg") no-repeat center right;
+    background: url("../static/medias/home/juergen-hasssler.jpg") no-repeat center right;
     background-size: cover;
     width: 80vw;
     height: 80vw;

@@ -1,17 +1,24 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Willkommen</title>
-		<pagetitle>Willkommen</pagetitle>
-	</head>
-	<body>
-		<h1>Willkommen {{ user }}</h1>
+{% extends "base_template.html" %}
 
-		<p>Das hier ist die Seite</p>
-		<p>Es gibt noch nichts zu sehen, aber es funktioniert</p>
-		<br>
 
-		<p>zum Backend: <a href={% url 'backend' %}>Django Admin</a></p>
+{% block title %}
+	<title>Willkommen</title>
+	<pagetitle>Willkommen</pagetitle>
+{% endblock %}
 
-	</body>
-</html>
+
+{% block content %}
+
+	<h1>Willkommen {{ user }}</h1>
+
+	<p>Das hier ist die Seite</p>
+	<p>Es gibt noch nichts zu sehen, aber es funktioniert</p>
+	<br>
+
+	<ul>
+		<li>zum Backend: <a href={% url 'backend' %}>Django Admin</a></li>
+		<li>zur Beispiel-Seite: <a href={% url 'hassler' %}>Hassler</a></li>
+		<li>zur anderen Beispiel-Seite: <a href={% url 'index' %}>Index</a></li>
+	</ul>
+
+{% endblock %}
