@@ -28,7 +28,7 @@ urlpatterns = [
     path('', include('django.contrib.auth.urls')),
     path('login/success/', core.hook_after_login),
     path('hassler/', core.hassler, name='hassler'),
-    path('index/' core.index, name='index')
+    path('index/', core.index, name='index')
 ]
 
 if settings.DEBUG:
