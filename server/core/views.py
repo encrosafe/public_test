@@ -15,12 +15,16 @@ def start_view(request):
 
 def check_login_and_redirect(request):
 	try:
-		if request.user:
+		if request.user and not request.user.is_anonymous():
 			return redirect('start_view')
 		else:
 			return redirect('login')
 	except:
 		return redirect('login')
+  
+  
+def hook_after_login(request):
+	return redirect('start_view')
 
 
 def hassler(request):
@@ -28,3 +32,5 @@ def hassler(request):
 
 def index(request):
 	return render(request, 'index_')
+
+
