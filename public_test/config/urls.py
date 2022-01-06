@@ -22,11 +22,11 @@ from server import views
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls, name='backend'),
+    path('admin/', admin.site.urls),
     path('start/', views.start_view, name='start_view'),
     path('', views.check_login_and_redirect),
-    path('', include('django.contrib.auth.urls')),
     path('login/success/', views.hook_after_login),
+    path('', include('django.contrib.auth.urls')),
     path('hassler/', views.hassler, name='hassler'),
     path('index/', views.index, name='index')
 ]
