@@ -18,7 +18,7 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 
-from public_test.server import views
+from server import views
 
 
 urlpatterns = [

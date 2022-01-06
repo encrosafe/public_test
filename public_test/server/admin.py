@@ -1,5 +1,5 @@
 from django.contrib import admin
 
-from core.models import Sample
+from server.models import Sample
 
 admin.site.register(Sample)
