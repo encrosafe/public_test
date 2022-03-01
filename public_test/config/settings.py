@@ -10,10 +10,18 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
+import shutil
 from pathlib import Path
+
+print("reading Settings...")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+for root, dirs, files in os.walk(BASE_DIR):
+    for directory in dirs:
+        if directory == '__pycache__':
+            shutil.rmtree(os.path.join(root, directory))
 
 
 # Quick-start development settings - unsuitable for production
@@ -57,6 +65,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'config.urls'
 
+print(os.path.join(BASE_DIR, 'templates/'))
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -73,6 +83,8 @@ TEMPLATES = [
         },
     },
 ]
+
+print(TEMPLATES)
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
