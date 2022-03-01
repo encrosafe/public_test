@@ -1,0 +1,24 @@
+{% extends "base_template.html" %}
+
+
+{% block title %}
+	<title>Willkommen</title>
+	<pagetitle>Willkommen</pagetitle>
+{% endblock %}
+
+
+{% block content %}
+
+	<h1>Willkommen {{ user }}</h1>
+
+	<p>Das hier ist die Seite</p>
+	<p>Es gibt noch nichts zu sehen, aber es funktioniert</p>
+	<br>
+
+	<ul>
+		<li>zum Backend: <a href='/admin/'>Django Admin</a></li>
+		<li>zur Beispiel-Seite: <a href={% url 'hassler' %}>Hassler</a></li>
+		<li>zur anderen Beispiel-Seite: <a href={% url 'index' %}>Index</a></li>
+	</ul>
+
+{% endblock %}

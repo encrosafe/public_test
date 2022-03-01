@@ -4,9 +4,9 @@ LABEL maintainer="londonappdeveloper.com"
 ENV PYTHONUNBUFFERED 1
 
 COPY ./requirements.txt /requirements.txt
-COPY ./server /server
+COPY ./public_test /public_test
 
-WORKDIR /server
+WORKDIR /public_test
 EXPOSE 8000
 
 RUN python -m venv /py && \
@@ -16,14 +16,14 @@ RUN python -m venv /py && \
         build-base postgresql-dev musl-dev && \
     /py/bin/pip install -r /requirements.txt && \
     apk del .tmp-deps && \
-    adduser --disabled-password --no-create-home server && \
+    adduser --disabled-password --no-create-home public_test && \
     mkdir -p /vol/web/static && \
     mkdir -p /vol/web/media && \
-    chown -R server:server /vol && \
+    chown -R public_test:public_test /vol && \
     chmod -R 755 /vol
 
 ENV PATH="/py/bin:$PATH"
 
-USER server
+USER public_test
 
 
