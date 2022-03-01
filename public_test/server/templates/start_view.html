@@ -9,16 +9,21 @@
 
 {% block content %}
 
-	<h1>Willkommen {{ user }}</h1>
+	<div class="row">
+		<h1>Willkommen {{ user }}</h1>
+	</div>
 
-	<p>Das hier ist die Seite</p>
-	<p>Es gibt noch nichts zu sehen, aber es funktioniert</p>
-	<br>
+	<div class="row">
+		<div class="card">
+			<p>Das hier ist die Seite</p>
+			<p>Es gibt noch nichts zu sehen, aber es funktioniert</p>
+			<br>
 
-	<ul>
-		<li>zum Backend: <a href='/admin/'>Django Admin</a></li>
-		<li>zur Beispiel-Seite: <a href={% url 'hassler' %}>Hassler</a></li>
-		<li>zur anderen Beispiel-Seite: <a href={% url 'index' %}>Index</a></li>
-	</ul>
+			<ul>
+				<li>zum Backend: <a href='/admin/'>Django Admin</a></li>
+			</ul>
+		</div>
+	</div>
+	
 
 {% endblock %}
