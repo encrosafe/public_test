@@ -26,7 +26,7 @@ urlpatterns = [
     path('start/', views.start_view, name='start_view'),
     path('login/success/', views.hook_after_login),
     path('', include('django.contrib.auth.urls')),
-    path('', include('public_test.server.urls')),
+    path('', include('server.urls')),
 ]
 
 if settings.DEBUG:
