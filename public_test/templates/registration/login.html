@@ -2,14 +2,48 @@
 <html>
 	<head>
 		<title>Loggen sie sich ein</title>
+
+		{% include "include_css.html" %}
+		{% include "include_js.html" %}
+
 	</head>
 	<body>
-
-		<form method="post">
-		  {% csrf_token %}
-		  {{ form.as_p }}
-		  <button type="submit">Log In</button>
-		</form>
+		<div id="wrapper">
+			<div id="content-wrapper" class="d-flex flex-column">
+				<div id="content">
+					<div class="container-fluid">
+						<h3>Loggen sie sich ein</h3>
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="card shadow">
+									<div class="card-header">
+										<h6 class="text-primary">Matrix-Account</h6>
+									</div>
+									<div class="card-body">
+										<form method="post">
+											{% csrf_token %}
+											{{ form.as_p }}
+											<button class="btn btn-primary btn-sm" type="submit">Log In</button>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="card shadow">
+									<div class="card-header">
+										<h6 class="text-primary">Registration</h6>
+									</div>
+									<div class="card-body">
+										<p>Neu auf der Seite und noch keinen Account? Registriere dich hier.</p>
+										<a class="btn btn-sm btn-primary" href="#">Registrieren</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 	</body>
 </html>

@@ -26,42 +26,13 @@
 
 		<div id="wrapper">
 
-			<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-				<li class="nav-item">
-					<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-					aria-expanded="true" aria-controls="collapseTwo">
-						<span>Start</span>
-					</a>
-				</li>
-
-				<div class="text-center d-none d-md-inline">
-					<button class="rounded-circle border-0" id="sidebarToggle"></button>
-				</div>
-			            
-			</ul>
+			{% include "sidebar.html" %}
 
 			<div id="content-wrapper" class="d-flex flex-column">
 
 				<div id="content">
 
-					<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-						<ul class="navbar-nav ml-auto">
-
-							<li class="nav-item">
-								<a class="nav-link">
-									Profil
-								</a>
-							</li>
-
-							<li class="nav-item">
-								<a class="nav-link">
-									Nachrichten
-								</a>
-							</li>
-
-						</ul>
-					</nav>
+					{% include "topbar.html" %}
 
 					<div class="container-fluid">
 						{% block content %}
