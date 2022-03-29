@@ -17,6 +17,7 @@ print("reading Settings...")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+APPS_DIR = BASE_DIR.path('public_test')
 
 for root, dirs, files in os.walk(BASE_DIR):
     for directory in dirs:
@@ -70,7 +71,8 @@ print(os.path.join(BASE_DIR, 'templates/'))
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates/')],
+        # 'DIRS': [os.path.join(BASE_DIR, 'templates/')],
+        'DIRS': str(APPS_DIR.path('templates')),
         # 'APP_DIRS': True,
         'OPTIONS': {
             'debug': DEBUG,
@@ -146,11 +148,21 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/public_test/static/'
+STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = '/vol/web/media'
-STATIC_ROOT = '/vol/web/static'
+# STATIC_ROOT = '/vol/web/static'
+STATIC_ROOT = str(BASE_DIR('staticfiles'))
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder'
+)
+
+STATICFILES_DIRS = (
+    str(APPS_DIR.path('static'))
+)
 
 
 # Default primary key field type
