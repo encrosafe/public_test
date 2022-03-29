@@ -17,9 +17,9 @@ from pathlib import Path
 print("reading Settings...")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-# BASE_DIR = Path(__file__).resolve().parent.parent
-BASE_DIR = environ.Path(__file__) - 3
-APPS_DIR = BASE_DIR.path('public_test')
+BASE_DIR = Path(__file__).resolve().parent.parent
+ROOT_DIR = environ.Path(__file__) - 3
+APPS_DIR = ROOT_DIR.path('public_test')
 
 for root, dirs, files in os.walk(BASE_DIR):
     for directory in dirs:
@@ -68,8 +68,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'config.urls'
 
-print(os.path.join(BASE_DIR, 'templates/'))
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -94,8 +92,6 @@ TEMPLATES = [
         },
     },
 ]
-
-print(TEMPLATES)
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
@@ -155,7 +151,7 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = '/vol/web/media'
 # STATIC_ROOT = '/vol/web/static'
-STATIC_ROOT = str(BASE_DIR('staticfiles'))
+STATIC_ROOT = str(ROOT_DIR('staticfiles'))
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
