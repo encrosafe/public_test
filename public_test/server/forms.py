@@ -4,7 +4,7 @@ from django.core.exceptions import ValidationError
 from builtins import object
 
 class UserForm(forms.ModelForm):
-	password2 = forms.CharField(widget=froms.PasswordInput())
+	password2 = forms.CharField(widget=forms.PasswordInput())
 
 	class Meta(object):
 		model = User
