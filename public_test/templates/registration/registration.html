@@ -12,7 +12,7 @@
 			<div id="content-wrapper" class="d-flex flex-column">
 				<div id="content">
 					<div class="container-fluid">
-						<h3>Registrieren Sie sich</h3>
+						<h1 class="my-4 mx-2">Registrieren Sie sich</h1>
 						<div class="row">
 							<div class="col-lg-6">
 								<div class="card shadow">
@@ -22,7 +22,7 @@
 									<div class="card-body">
 										<form method="post">
 											{% csrf_token %}
-											{{ form.as_p }}
+											{{ form.as_table }}
 											<button class="btn btn-primary btn-sm" type="submit">Registrieren</button>
 										</form>
 									</div>
