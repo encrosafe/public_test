@@ -159,7 +159,7 @@ STATICFILES_FINDERS = (
 )
 
 STATICFILES_DIRS = (
-    str(APPS_DIR.path('static'))
+    str(APPS_DIR.path('static')),
 )
 
 
