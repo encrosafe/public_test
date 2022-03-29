@@ -30,10 +30,3 @@ services:
       - POSTGRES_USER=devuser
       - POSTGRES_PASSWORD=changeme
 
-  nginx:
-    build: ./nginx
-    ports:
-      - 1337:80
-    depends_on:
-      - server
-
