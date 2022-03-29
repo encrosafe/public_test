@@ -12,30 +12,30 @@
 			<div id="content-wrapper" class="d-flex flex-column">
 				<div id="content">
 					<div class="container-fluid">
-						<h3>Loggen Sie sich ein</h3>
+						<h1 class="my-4 mx-2">Loggen Sie sich ein</h1>
 						<div class="row">
 							<div class="col-lg-6">
-								<div class="card shadow">
+								<div class="card">
 									<div class="card-header">
 										<h6 class="text-primary">Matrix-Account</h6>
 									</div>
 									<div class="card-body">
 										<form method="post">
 											{% csrf_token %}
-											{{ form.as_p }}
+											{{ form.as_table }}
 											<button class="btn btn-primary btn-sm" type="submit">Log In</button>
 										</form>
 									</div>
 								</div>
 							</div>
 							<div class="col-lg-6">
-								<div class="card shadow">
+								<div class="card">
 									<div class="card-header">
 										<h6 class="text-primary">Registration</h6>
 									</div>
 									<div class="card-body">
 										<p>Neu auf der Seite und noch keinen Account? Registriere dich hier.</p>
-										<a class="btn btn-sm btn-primary" href="#">Registrieren</a>
+										<a class="btn btn-sm btn-primary" href="{% urls 'registration' %}">Registrieren</a>
 									</div>
 								</div>
 							</div>
