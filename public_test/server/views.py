@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
 
+from server.forms import UserForm
+
 # Create your views here.
 
 def start_view(request):
@@ -27,10 +29,13 @@ def hook_after_login(request):
 	return redirect('start_view')
 
 
-def hassler(request):
-	return render(request, 'index_hassler.hmtl')
+def registration(request):
+	if request.method == 'POST':
+		form = UserForm(request.POST)
+		if form.is_valid():
+			form.save()
+			redirect('start_view')
+	else:
+		form = UserForm()
 
-def index(request):
-	return render(request, 'index_')
-
-
+	return render(request, 'registration.html', {'form': form})
