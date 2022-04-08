@@ -16,6 +16,15 @@ class UserForm(forms.ModelForm):
 
 	def clean():
 		cleaned_data = super().clean()
+
+		username = cleaned_data.get('username')
+
+		for user in User.objects.all():
+			if user.username == username:
+				raise ValidationError(
+					'Der Nutzername ist bereits vergeben'
+				)
+
 		p1 = cleaned_data.get('password')
 		p2 = cleaned_data.get('password2')
 
