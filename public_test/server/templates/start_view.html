@@ -2,26 +2,25 @@
 
 
 {% block title %}
-	<title>Willkommen</title>
-	<pagetitle>Willkommen</pagetitle>
 {% endblock %}
 
 
 {% block content %}
 
-	<div class="row">
+	<div class="row mb-4">
 		<h1>Willkommen {{ user }}</h1>
 	</div>
 
 	<div class="row">
 		<div class="card">
-			<p>Das hier ist die Seite</p>
-			<p>Es gibt noch nichts zu sehen, aber es funktioniert</p>
-			<br>
-
-			<ul>
-				<li>zum Backend: <a href='/admin/'>Django Admin</a></li>
-			</ul>
+			<div class="card-header">
+				<h6 class="text-primary">Links</h6>
+			</div>
+			<div class="card-body">
+				<ul>
+					<li>zum Backend: <a href='/admin/'>Django Admin</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 	

@@ -17,12 +17,12 @@
 							<div class="col-lg-6">
 								<div class="card">
 									<div class="card-header">
-										<h6 class="text-primary">Matrix-Account</h6>
+										<h6 class="text-primary"><i class="fa-solid fa-user"> Matrix-Account</h6>
 									</div>
 									<div class="card-body">
 										<form method="post">
 											{% csrf_token %}
-											{{ form.as_table }}
+											{{ form.as_ul }}
 											<button class="btn btn-primary btn-sm" type="submit">Log In</button>
 										</form>
 									</div>
@@ -31,7 +31,7 @@
 							<div class="col-lg-6">
 								<div class="card">
 									<div class="card-header">
-										<h6 class="text-primary">Registration</h6>
+										<h6 class="text-primary"><i class="fa-solid fa-user-plus"> Registration</h6>
 									</div>
 									<div class="card-body">
 										<p>Neu auf der Seite und noch keinen Account? Registriere dich hier.</p>
